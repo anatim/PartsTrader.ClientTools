@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartsTrader.ClientTools", "PartsTrader.ClientTools\PartsTrader.ClientTools.csproj", "{1508E8F4-D551-4B81-B09B-DD3D7968A418}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartsTrader.ClientTools.Tests", "PartsTrader.ClientTools.Tests\PartsTrader.ClientTools.Tests.csproj", "{709314C7-366F-4D0B-91DF-069821CAE622}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1508E8F4-D551-4B81-B09B-DD3D7968A418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1508E8F4-D551-4B81-B09B-DD3D7968A418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1508E8F4-D551-4B81-B09B-DD3D7968A418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1508E8F4-D551-4B81-B09B-DD3D7968A418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709314C7-366F-4D0B-91DF-069821CAE622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709314C7-366F-4D0B-91DF-069821CAE622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709314C7-366F-4D0B-91DF-069821CAE622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709314C7-366F-4D0B-91DF-069821CAE622}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AE4E00D-63FD-4521-B62B-397BFFFE45A9}
+	EndGlobalSection
+EndGlobal
