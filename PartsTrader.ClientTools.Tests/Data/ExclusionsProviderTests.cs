@@ -59,7 +59,6 @@ public class ExclusionsProviderTests
     [Fact]
     public void FileChange_NewEntryAppearsOnNextCall()
     {
-        // Because caching was removed, each call should re-read the file.
         var path = CreateTempFile("""
         [
           { "PartNumber": "1111-test" }
@@ -70,7 +69,7 @@ public class ExclusionsProviderTests
         Assert.Single(first);
         Assert.Contains("1111-test", first, StringComparer.OrdinalIgnoreCase);
 
-        // Modify file: add a second part
+        // Modifying the file - adding another part
         File.WriteAllText(path, """
         [
           { "PartNumber": "1111-test" },

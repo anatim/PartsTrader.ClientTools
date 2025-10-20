@@ -30,9 +30,9 @@ namespace PartsTrader.ClientTools.Controllers
         [HttpGet("compatible/{partNumber}")]
         [AllowAnonymous]
         [ProducesResponseType(typeof(IEnumerable<PartsContract>), StatusCodes.Status200OK)]
-        public ActionResult<IEnumerable<PartsContract>> ListCompatiblePartsByPartNumber(string? partNumber)
+        public ActionResult<IEnumerable<PartsContract>> ListCompatiblePartsByPartNumber(string partNumber)
         {
-            var trimmed = partNumber?.Trim();
+            var trimmed = partNumber.Trim();
 
             if (string.IsNullOrWhiteSpace(trimmed) || !PartPattern.IsMatch(trimmed))
             {

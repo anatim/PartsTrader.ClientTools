@@ -17,10 +17,6 @@ Pattern used (case-insensitive): `####-XXXX…`
 - 4 or more alphanumeric characters (letters or digits)
 - No spaces or special characters (underscore, percent, second dash, etc.)
 
-Examples  
-Valid: `1235-dcba`, `1234-9a0B `, ` 0001-XYZ123`  
-Invalid: `123-abcd`, `12345-abcd`, `1234-abc`, `1234-ab d`, `1234-ab_c`
-
 User input is trimmed then lower‑cased.
 
 ## Exclusions
@@ -33,7 +29,8 @@ Missing, invalid, or malformed file is treated as empty exclusions (logs error/w
 - Splits `{partId}-{partCode}`
 - Always returns 3 synthetic parts: original, `partId - 1`, `partId + 1` with suffixes `partCode`, `partCode + "a"`, `partCode + "b"`
 - `Id` is a random `Guid` per item
-- Throws `InvalidPartNumberException` if given invalid input
+- `InvalidPartNumberException` was added to be thrown in case of invalid input but ended up not being implemented. Instead, validation is done in the Controller layer, and this unused service layer validation should be cleaned up.
+
 A real implementation would query a data source.
 
 
@@ -47,7 +44,7 @@ Controller:
 - Trimming + lowercasing - happens before service call
 
 Service:
-- Numeric variant generation - 3 items, adjusted IDs
+- Numeric variant generation - 3 items with mocked IDs
 
 ExclusionsProvider:
 - Missing file - returns empty, logs error
@@ -59,4 +56,8 @@ ExclusionsProvider:
 Run PartsTrader.ClientTools.Api to launch the Swagger UI (Development)
 
 ## Running tests
+Run the commands below from the root directory:
+``` powershell
+cd PartsTrader.ClientTools.Tests
 dotnet test
+```
